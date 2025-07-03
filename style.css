@@ -1,0 +1,305 @@
+/* General */
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 50px;
+}
+
+.sub-titulo {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.6);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 110px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ff3c00;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+}
+
+/* Galería de cortes */
+.seccion-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 60px;
+  color: white;
+}
+
+.galeria-cortes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.corte {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.corte:hover {
+  transform: scale(1.05);
+}
+
+.corte img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.corte p {
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #00ffae;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.icon-link:hover .social-icon {
+  filter: grayscale(0%);
+}
+.social-icono
+{
+font-size: 1px;
+
+}
+
+
+
+
+
+.login-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.login-section h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: #bbb;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #ff3c00;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #e63200;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 42px;
+  }
+
+  .sub-titulo {
+    font-size: 24px;
+  }
+
+  .footer-content p {
+    font-size: 28px;
+  }
+
+  .social-linkse {
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+    background-size: 300px;
+  }
+
+  .icon-link {
+    justify-content: center;
+    background-size: 400px;
+    font-size: 25px;
+  }
+
+  .seccion-titulo {
+    font-size: 2.8rem;
+  }
+
+  .corte p {
+    font-size: 36px;
+    margin: 5px 0;
+  }
+
+  .precio {
+    font-size: 30px;
+    color: #00ffae;
+    margin: 5px 0;
+  }
+
+  .corte img {
+    height: 180px;
+  }
+
+  .login-section {
+    padding: 20px 15px;
+    margin: 30px 10px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 25px;
+    padding: 16px;
+  }
+}
+.icono-tijeras {
+  max-width: 60px;
+  margin: 0 auto 15px;
+  color: #00ffae; /* color verde neón */
+}
